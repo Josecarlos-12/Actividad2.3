@@ -22,7 +22,7 @@ public class Barrita_Vida : MonoBehaviour
         TextoVida.text = "Vida: " + vida.ToString("f0");
     }
 
-    public void recibircura( float cura)
+    public void Recibircura( float cura)
     {
         vida += cura;
 

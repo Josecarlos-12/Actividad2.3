@@ -10,7 +10,7 @@ public class curacion : MonoBehaviour
     {
         if (other.CompareTag("Player")&& other.GetComponent<Barrita_Vida>())
         {
-            other.GetComponent<Barrita_Vida>().recibircura(curame);
+            other.GetComponent<Barrita_Vida>().Recibircura(curame);
 
             Destroy(gameObject);
         }
