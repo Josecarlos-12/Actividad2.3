@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerBullet : Bullet, DamagePlayer
 {
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private GameObject point;
+    [SerializeField, Header("Damage")] private int damage;
 
-    void Update()
+    private void Start()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Instantiate(bullet, point.transform.position, point.transform.rotation);
-        }
+        Destroy(gameObject, timeLife);
+    }
+
+    public int GetDamagePlayer()
+    {
+        return damage;
     }
 }
